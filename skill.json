@@ -1,0 +1,38 @@
+{
+  "name": "genpark-hierarchical-node-hybrid-retrieval-rag-synthesizer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Hierarchical node index and hybrid retrieval synthesizer resolving complex multi-document questions.",
+  "author": "genpark",
+  "category": "rag-synthesizer",
+  "tags": [
+    "llamaindex",
+    "hierarchical-rag",
+    "hybrid-search",
+    "reciprocal-rank-fusion",
+    "parent-node-retrieval"
+  ],
+  "inputs": {
+    "complex_query": {
+      "type": "string"
+    },
+    "documents_indexed_count": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "rag_query_id": {
+      "type": "string"
+    },
+    "parent_document_nodes_retrieved": {
+      "type": "integer"
+    },
+    "hybrid_dense_sparse_rrf_score": {
+      "type": "number"
+    },
+    "node_provenance_citations_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
